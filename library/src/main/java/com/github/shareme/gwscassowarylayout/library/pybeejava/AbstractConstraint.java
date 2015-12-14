@@ -54,12 +54,21 @@ public abstract class AbstractConstraint
 
     private Object _attachedObject;
 
+    /**
+     *
+     * @param strength the strength
+     * @param weight the weight
+     */
     public AbstractConstraint(Strength strength, double weight)
     {
         _strength = strength;
         _weight = weight;
     }
 
+    /**
+     *
+     * @param strength the strength
+     */
     public AbstractConstraint(Strength strength)
     {
         _strength = strength;
@@ -74,31 +83,55 @@ public abstract class AbstractConstraint
 
     public abstract Expression getExpression();
 
+    /**
+     *
+     * @return false
+     */
     public boolean isEditConstraint()
     {
         return false;
     }
 
+    /**
+     *
+     * @return false
+     */
     public boolean isInequality()
     {
         return false;
     }
 
+    /**
+     *
+     * @return Strength.REQUIRED boolean
+     */
     public boolean isRequired()
     {
         return _strength == Strength.REQUIRED;
     }
 
+    /**
+     *
+     * @return false
+     */
     public boolean isStayConstraint()
     {
         return false;
     }
 
+    /**
+     *
+     * @return _strength
+     */
     public Strength getStrength()
     {
         return _strength;
     }
 
+    /**
+     *
+     * @return _weight
+     */
     public double getWeight()
     {
         return _weight;
