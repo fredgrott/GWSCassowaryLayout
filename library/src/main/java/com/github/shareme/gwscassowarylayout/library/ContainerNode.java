@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 Agens AS
+ * Modifications Copyright(C) 2015 Fred Grott(GrottWorkShop)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
 package com.github.shareme.gwscassowarylayout.library;
 
 
@@ -25,6 +24,7 @@ import com.github.shareme.gwscassowarylayout.library.pybeejava.Strength;
 import com.github.shareme.gwscassowarylayout.library.pybeejava.Variable;
 
 /**
+ * ContainerNode
  * Created by alex on 10/10/2014.
  */
 public class ContainerNode extends Node {

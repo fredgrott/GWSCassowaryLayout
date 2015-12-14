@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 Agens AS
+ * Modifications Copyright(C) 2015 Fred Grott(GrottWorkShop)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +28,7 @@ import timber.log.Timber;
 
 
 /**
+ * Node
  * Created by alex on 25/09/2014.
  */
 @SuppressWarnings("unused")

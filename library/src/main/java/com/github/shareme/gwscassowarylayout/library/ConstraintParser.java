@@ -1,5 +1,6 @@
-package com.github.shareme.gwscassowarylayout.library;/*
+/*
  * Copyright (C) 2014 Agens AS
+ * Modifications Copyright(C) 2015 Fred Grott(GrottWorkShop)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +14,7 @@ package com.github.shareme.gwscassowarylayout.library;/*
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.github.shareme.gwscassowarylayout.library;
 
 
 import com.github.shareme.gwscassowarylayout.library.pybeejava.Constraint;
@@ -27,6 +29,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * ConstraintParser
  * Created by alex on 25/09/2014.
  */
 public class ConstraintParser {
@@ -41,6 +44,7 @@ public class ConstraintParser {
         Expression resolveConstant(String name);
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static Constraint parseConstraint(String constraintString, CassowaryVariableResolver variableResolver) {
 
         Matcher matcher = PATTERN.matcher(constraintString);
@@ -89,7 +93,7 @@ public class ConstraintParser {
 
         List<String> postFixExpression = infixToPostfix(tokenizeExpression(expressionString));
 
-        Stack<Expression> linearExpressionsStack = new Stack<Expression>();
+        Stack<Expression> linearExpressionsStack = new Stack<>();
 
         for (String expression : postFixExpression) {
             if ("+".equals(expression)) {
@@ -116,9 +120,9 @@ public class ConstraintParser {
 
     public static List<String> infixToPostfix(List<String> tokenList) {
 
-        Stack<Integer> s = new Stack<Integer>();
+        Stack<Integer> s = new Stack<>();
 
-        List<String> postFix = new ArrayList<String>();
+        List<String> postFix = new ArrayList<>();
         for (String token : tokenList) {
             char c = token.charAt(0);
             int idx = OPS.indexOf(c);
@@ -151,7 +155,7 @@ public class ConstraintParser {
     }
 
     public static List<String> tokenizeExpression(String expressionString) {
-        ArrayList<String> tokenList = new ArrayList<String>();
+        ArrayList<String> tokenList = new ArrayList<>();
 
         StringBuilder stringBuilder = new StringBuilder();
         int i;

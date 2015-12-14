@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 Agens AS
+ * Modifications Copyright(C) 2015 Fred Grott(GrottWorkShop)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,12 +26,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * DimensionParser
  * Created by alex on 09/09/2014.
  */
 public class DimensionParser {
 
     private static Pattern pattern = Pattern.compile("^(wrapContent|matchParent)|(\\d+)(px|dp|sp|pt|in|mm)");
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static Double getDimension(String widthHeightString, Context context) {
 
         Double widthHeight = null;
